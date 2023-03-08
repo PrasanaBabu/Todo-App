@@ -1,0 +1,12 @@
+
+
+<div class="card shadow" >
+  <h4 id="title" class="card-header" style="text-align: center">Fav Todos List</h4>
+  <div class="card-body">
+    <ul class="list-group" *ngFor="let todo of favTodos">
+
+      <app-todo [todoInput]="todo"></app-todo>
+
+    </ul>
+  </div>
+</div>

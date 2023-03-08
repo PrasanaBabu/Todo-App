@@ -1,0 +1,10 @@
+<div class="card shadow" >
+  <h4 class="card-header" style="text-align: center">My Todo List</h4>
+  <div class="card-body">
+    <ul class="list-group" *ngFor="let todo of todos">
+
+      <app-todo [todoInput]="todo"></app-todo>
+
+    </ul>
+  </div>
+</div>

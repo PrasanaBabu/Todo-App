@@ -1,0 +1,13 @@
+<li class="list-group-item" [ngClass]="toggleClass()">
+  <div class="form-check d-inline">
+    <input type="checkbox" class="form-check-input" id="complete" (change)="onChange()">
+    <label id="titleField" for="complete" class="form-check-label lead">{{todoInput.title}} : </label>
+    <a id="detailField" style="font-size: small"> {{todoInput.detail}}</a>
+  </div>
+
+  <div class="float-end" >
+    <span class="mx-3" id="date">{{todoInput.dateOfCreation | date}}</span>
+    <i id="favIcon" class="pi pi-heart-fill" (click)='isFavorite()' [ngClass]="todoInput.isFavorite? 'text-danger' : '' "></i>
+    <button class="btn btn-danger btn-sm mx-3" id="deleteButton" (click)="deleteTodo(todoInput)">x</button>
+  </div>
+</li>
